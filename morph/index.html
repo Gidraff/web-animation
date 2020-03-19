@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+
+
+
+    <svg id="blue_svg" width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="blue_path" d="M0 0H360H720H1440V911V1024H0V0Z" fill="#2BD0F4"/>
+    </svg>
+
+
+
+
+
+    <script src="./anime.min.js"></script>
+    <script>
+      let morphing = anime({
+        targets: '#blue_svg .blue_path',
+        d: [
+          { value: "M0 0H360H720L835 580.5L1440 911V1024H0V0Z" },
+        ],
+        easing: 'easeOutQuad',
+        duration: 2000,
+        loop: true
+      });
+    </script>
+  </body>
+</html>
